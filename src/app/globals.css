@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/*
+  COLOR THEME
+  The whole site uses two palettes: "ink" (backgrounds and text) and "accent"
+  (links, tags, highlights). To change the look, swap "zinc" and "indigo" below
+  for any Tailwind color: https://tailwindcss.com/docs/colors
+  e.g. slate + teal, neutral + violet, stone + orange.
+*/
+@theme inline {
+  --font-sans: var(--font-inter);
+
+  --color-ink-50: var(--color-zinc-50);
+  --color-ink-100: var(--color-zinc-100);
+  --color-ink-200: var(--color-zinc-200);
+  --color-ink-300: var(--color-zinc-300);
+  --color-ink-400: var(--color-zinc-400);
+  --color-ink-500: var(--color-zinc-500);
+  --color-ink-600: var(--color-zinc-600);
+  --color-ink-700: var(--color-zinc-700);
+  --color-ink-800: var(--color-zinc-800);
+  --color-ink-900: var(--color-zinc-900);
+  --color-ink-950: var(--color-zinc-950);
+
+  --color-accent-50: var(--color-indigo-50);
+  --color-accent-100: var(--color-indigo-100);
+  --color-accent-200: var(--color-indigo-200);
+  --color-accent-300: var(--color-indigo-300);
+  --color-accent-400: var(--color-indigo-400);
+  --color-accent-500: var(--color-indigo-500);
+  --color-accent-600: var(--color-indigo-600);
+  --color-accent-700: var(--color-indigo-700);
+  --color-accent-800: var(--color-indigo-800);
+  --color-accent-900: var(--color-indigo-900);
+  --color-accent-950: var(--color-indigo-950);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+  Korean text: Inter has no Korean characters, so Korean falls back to
+  Pretendard (loaded in app/ko/layout.tsx), which is designed to match Inter.
+  English words inside Korean text still use Inter.
+*/
+:lang(ko) {
+  font-family: var(--font-inter), "Pretendard Variable", Pretendard, sans-serif;
+}
